@@ -1,4 +1,12 @@
+:root {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
 
+    color: #ED3B44;
+    background-color: #ED3B44;
+}
 @import url('./reset.css');
 @import url('./header.css');
 @import url('./hero.css');
