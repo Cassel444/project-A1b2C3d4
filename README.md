@@ -26,6 +26,6 @@
 <p><a href="https://github.com/t-matveentsev" target="_blank">Tema Matveentsev</a> - Work together</p>
 
 <h2>Scrum master</h2>
-<a href="https://github.com/muzykanick" target="_blank">Nick Muzyka</a>
+<a href="https://github.com/YeVlad" target="_blank">Владислав Єфремов</a>
 <h2>Team leader</h2>
 <a href="https://github.com/Cassel444" target="_blank">Lesia Sasiuk</a>
