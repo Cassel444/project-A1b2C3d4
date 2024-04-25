@@ -1,0 +1,152 @@
+body {
+  font-family: 'Inter Tight', sans-serif;
+  background-color: #1c1d20;
+  color: #fafafa;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex-grow: 1;
+}
+img {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+a {
+  font-style: normal;
+  color: currentColor;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+input {
+  font-family: inherit;
+}
+button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+
+.footer-container {
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .footer-container {
+    max-width: 1440px;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.footer-container {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-title {
+  margin-bottom: 63px;
+  overflow: hidden;
+}
+.footer-image {
+  /* margin: 0 auto;
+  border-radius: 4px;
+  object-fit: none; */
+  /* float: left; */
+}
+
+.footer-title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+}
+.accent {
+  color: #ed3b44;
+}
+
+.footer-wrapper-form {
+  margin-bottom: 64px;
+}
+.footer-wrap-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-form {
+  min-width: 100%;
+  height: 44px;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  resize: none;
+  background-color: #1c1d20;
+}
+
+.footer-form::placeholder {
+  color: rgba(250, 250, 250, 0.6);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.footer-submit-btn {
+  height: 100px;
+  width: 100px;
+  margin-top: 32px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ed3b44;
+  text-transform: uppercase;
+}
+
+.footer-contacts {
+}
+.footer-list-contacts {
+  display: flex;
+  gap: 10px;
+}
+.footer-contact {
+  padding: 10px 12px;
+
+  border-radius: 60px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
