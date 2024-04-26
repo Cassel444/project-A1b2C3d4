@@ -72,6 +72,11 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 1440px;
+  height: 960px;
+  border: 1px solid red;
+  flex-shrink: 0;
+  overflow: hidden;
 }
 
 .gallery-row {
