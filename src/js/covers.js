@@ -12,18 +12,21 @@ function getRandomIndices(limit, count) {
 
 function createGallery() {
   const imageElements = section.querySelectorAll('.cover-list-item');
-  const galleryBox = document.createElement('div');
-  galleryBox.className = 'gallery-box';
+  const galleryWrapper = document.createElement('div'); 
+  galleryWrapper.className = 'gallery-wrapper'; 
 
-  const gallery = document.createElement('div');
-  gallery.id = 'gallery';
+  const galleryBox = document.createElement('div'); 
+  galleryBox.className = 'gallery-box'; 
+
+  const gallery = document.createElement('div'); 
+  gallery.id = 'gallery'; 
 
   const rows = [];
 
   for (let i = 0; i < 5; i++) {
     const row = document.createElement('div');
     row.className = 'gallery-row';
-    const randomIndices = getRandomIndices(imageElements.length, 5);
+    const randomIndices = getRandomIndices(imageElements.length, 7);
 
     randomIndices.forEach(index => {
       const imageClone = imageElements[index].cloneNode(true);
@@ -34,12 +37,33 @@ function createGallery() {
     gallery.appendChild(row);
   }
 
-    rows.forEach(row => {
+  rows.forEach(row => {
     row.classList.add('animate-right');
   });
 
   galleryBox.appendChild(gallery);
-  section.appendChild(galleryBox);
+  galleryWrapper.appendChild(galleryBox);
+  section.appendChild(galleryWrapper); 
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  function checkVisibilityAndAnimate() {
+    if (isElementInViewport(section)) {
+      animate();
+    }
+  }
+
+  checkVisibilityAndAnimate();
+
+  window.addEventListener('scroll', checkVisibilityAndAnimate);
 }
 
 createGallery();
