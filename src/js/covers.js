@@ -23,7 +23,7 @@ function createGallery() {
   for (let i = 0; i < 5; i++) {
     const row = document.createElement('div');
     row.className = 'gallery-row';
-    const randomIndices = getRandomIndices(imageElements.length, 10);
+    const randomIndices = getRandomIndices(imageElements.length, 5);
 
     randomIndices.forEach(index => {
       const imageClone = imageElements[index].cloneNode(true);
