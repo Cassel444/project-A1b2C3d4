@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  margin-bottom: 32px;
 }
 .motto-box {
   height: 500px;
@@ -40,6 +42,8 @@
 }
 
 .about-container {
+  display: flex;
+  justify-content: space-between
 }
 
 .about-title {
@@ -50,8 +54,13 @@ letter-spacing: -0.02em;
 text-transform: uppercase;
 }
 .about-arrow {
+display: flex;
+justify-content: center;
+align-items: center;
 
+padding: 10px;
 
+background-color: transparent;
   border-radius: 100px;
 border: 1px solid rgba(250, 250, 250, 0.20);
 
@@ -63,6 +72,12 @@ border: 1px solid rgba(250, 250, 250, 0.20);
 }
 
 .about-list-text {
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 12px;
+  padding-bottom: 20px;
 }
 .about-item-text {
 font-weight: 500;
@@ -70,4 +85,7 @@ line-height: 1.5em;
 letter-spacing: -0.02em;
 }
 .line {
+  height: 1px;
+background-color: rgba(250, 250, 250, 0.20);
+
 }
