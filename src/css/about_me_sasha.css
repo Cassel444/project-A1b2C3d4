@@ -43,16 +43,31 @@
 }
 
 .about-title {
+  color: rgba(250, 250, 250, 0.40);
+font-weight: 600;
+line-height: 1.5em;
+letter-spacing: -0.02em;
+text-transform: uppercase;
 }
 .about-arrow {
+
+
+  border-radius: 100px;
+border: 1px solid rgba(250, 250, 250, 0.20);
+
 }
 
 .icon {
+  fill: white;
+  stroke: none;
 }
 
 .about-list-text {
 }
 .about-item-text {
+font-weight: 500;
+line-height: 1.5em;
+letter-spacing: -0.02em;
 }
 .line {
 }
