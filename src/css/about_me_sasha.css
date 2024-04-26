@@ -1,0 +1,58 @@
+.motto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.motto-box {
+  height: 500px;
+  padding: 32px 32px 272px 32px;
+
+  border-radius: 24px;
+  background: #242527;
+}
+.motto-text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17em;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+.text-functional {
+  color: var(--change-color);
+}
+.text-websites {
+  color: rgba(250, 250, 250, 0.4);
+}
+.about-img {
+}
+.camera-man {
+}
+
+/* LIST */
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-item {
+}
+
+.about-container {
+}
+
+.about-title {
+}
+.about-arrow {
+}
+
+.icon {
+}
+
+.about-list-text {
+}
+.about-item-text {
+}
+.line {
+}
