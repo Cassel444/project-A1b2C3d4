@@ -90,6 +90,10 @@
   gap: 32px;
 }
 
+.gallery-row:nth-child(even) {
+  margin-left: 50%;
+}
+
 .gallery-row img {
   width: 554px;
   height: 314px;
