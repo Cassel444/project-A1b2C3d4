@@ -12,23 +12,34 @@ function getRandomIndices(limit, count) {
 
 function createGallery() {
   const imageElements = section.querySelectorAll('.cover-list-item');
+  const galleryBox = document.createElement('div');
+  galleryBox.className = 'gallery-box';
+
   const gallery = document.createElement('div');
   gallery.id = 'gallery';
+
+  const rows = [];
 
   for (let i = 0; i < 5; i++) {
     const row = document.createElement('div');
     row.className = 'gallery-row';
-    const randomIndices = getRandomIndices(imageElements.length, 3);
+    const randomIndices = getRandomIndices(imageElements.length, 10);
 
     randomIndices.forEach(index => {
       const imageClone = imageElements[index].cloneNode(true);
       row.appendChild(imageClone);
     });
 
+    rows.push(row);
     gallery.appendChild(row);
   }
 
-  section.appendChild(gallery);
+    rows.forEach(row => {
+    row.classList.add('animate-right');
+  });
+
+  galleryBox.appendChild(gallery);
+  section.appendChild(galleryBox);
 }
 
 createGallery();
