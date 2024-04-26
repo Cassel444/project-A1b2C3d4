@@ -26,7 +26,7 @@ function createGallery() {
   for (let i = 0; i < 5; i++) {
     const row = document.createElement('div');
     row.className = 'gallery-row';
-    const randomIndices = getRandomIndices(imageElements.length, 7);
+    const randomIndices = getRandomIndices(imageElements.length, 9);
 
     randomIndices.forEach(index => {
       const imageClone = imageElements[index].cloneNode(true);
@@ -64,6 +64,21 @@ function createGallery() {
   checkVisibilityAndAnimate();
 
   window.addEventListener('scroll', checkVisibilityAndAnimate);
+
+  function animate() {
+    rows.forEach(row => {
+      row.style.animationPlayState = 'running';
+      row.addEventListener('animationend', () => {
+        row.style.animationPlayState = 'paused';
+        row.style.transform = 'translateX(0)';
+        const firstItem = row.querySelector('.cover-list-item:first-child');
+        if (firstItem.offsetLeft + firstItem.offsetWidth < 0) {
+          row.appendChild(firstItem.cloneNode(true));
+          row.removeChild(firstItem);
+        }
+      });
+    });
+  }
 }
 
 createGallery();
