@@ -18,12 +18,12 @@ body {
     }
 }
 
-.container {
+/* .container-faq {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-}
+} */
 
 .faq-head {
     color: rgba(250, 250, 250, 0.40);
