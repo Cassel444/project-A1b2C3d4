@@ -114,17 +114,25 @@ border: 1px solid rgba(250, 250, 250, 0.20);
 }
 
 .about-list-container {
-  
   gap: 32px;
- 
+}
 
 @media only screen and (min-width: 768px) {
    .about-list{
     gap: 32px;
+  }
+  .about-list-container {
     
+    padding-top: 8px;
+    padding-bottom: 32px;
   }
 }
-
+@media only screen and (min-width: 1440px) {
+   .about-list-text{
+    padding-left: 696px;
+    padding-right: 68px;
+  }
+}
 
 .about-item-text {
 font-weight: 500;
