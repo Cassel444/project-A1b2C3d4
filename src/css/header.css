@@ -115,6 +115,11 @@
   line-height: normal;
   letter-spacing: -0.32px;
 }
+@media only screen and (max-width: 767.98px) {
+  .order-btn {
+    display: none;
+  }
+}
 .order-btn:hover,
 .order-btn:focus {
   background-color: #e0373f;
@@ -150,7 +155,7 @@
   justify-content: center;
   top: 50%;
   left: 50%;
-  background-image: url('./img/Hero/Glass-effect-1@1x.red.png');
+  background-image: url('../img/Hero/Glass-effect-1@1x.red.png');
   background-size: cover;
   background-position: center;
 
@@ -161,7 +166,7 @@
 }
 @media only screen and (max-width: 374.98px) and (min-resolution: 192dpi) {
   .modal {
-    background-image: url('./img/Hero/Glass-effect-1@2x.red.png');
+    background-image: url('../img/Hero/Glass-effect-1@2x.red.png');
   }
 }
 
