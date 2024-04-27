@@ -12,14 +12,14 @@ function getRandomIndices(limit, count) {
 
 function createGallery() {
   const imageElements = section.querySelectorAll('.cover-list-item');
-  const galleryWrapper = document.createElement('div'); 
-  galleryWrapper.className = 'gallery-wrapper'; 
+  const galleryWrapper = document.createElement('div');
+  galleryWrapper.className = 'gallery-wrapper';
 
-  const galleryBox = document.createElement('div'); 
-  galleryBox.className = 'gallery-box'; 
+  const galleryBox = document.createElement('div');
+  galleryBox.className = 'gallery-box';
 
-  const gallery = document.createElement('div'); 
-  gallery.id = 'gallery'; 
+  const gallery = document.createElement('div');
+  gallery.id = 'gallery';
 
   const rows = [];
 
@@ -43,7 +43,7 @@ function createGallery() {
 
   galleryBox.appendChild(gallery);
   galleryWrapper.appendChild(galleryBox);
-  section.appendChild(galleryWrapper); 
+  section.appendChild(galleryWrapper);
 
   function isElementInViewport(el) {
     const rect = el.getBoundingClientRect();
