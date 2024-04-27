@@ -27,13 +27,39 @@
 .navigation {
   display: none;
 }
+@media only screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
 .menu {
+  padding: 10px;
+  color: #fafafa;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  text-decoration-line: underline;
 }
 .navi {
+  display: none;
+}
+.navi.is-open {
+  display: block;
 }
 .nav-wraper {
+  display: flex;
+  gap: 6px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .nav-link {
+  color: #fafafa;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
 }
 .open-menu-btn {
   display: flex;
@@ -45,9 +71,25 @@
   background-color: transparent;
   border: none;
 }
+@media only screen and (min-width: 768px) {
+  .open-menu-btn {
+    display: none;
+  }
+}
 .burger-menu {
   stroke: #fafafa;
 }
+.order-btn {
+  padding: 18px 24px;
+  background-color: var(--change-color);
+  border-radius: 60px;
+  border: none;
+  color: #fafafa;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -91,6 +133,7 @@
     background-image: url('../img/Hero/Glass-effect-1@2x.red.png');
   }
 }
+
 .modal-close-btn {
   position: absolute;
   top: 32px;
@@ -122,8 +165,6 @@
 .navi-modal-link {
   color: #fafafa;
   font-family: inherit;
-  font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
