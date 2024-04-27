@@ -22,10 +22,83 @@
     />
     <script type="module" crossorigin src="/project-A1b2C3d4/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/project-A1b2C3d4/assets/vendor-c6ca0da5.js">
-    <link rel="stylesheet" href="/project-A1b2C3d4/assets/index-f2cc803f.css">
+    <link rel="stylesheet" href="/project-A1b2C3d4/assets/index-1471b2dd.css">
   </head>
   <body>
-    
+    <header class="header">
+  <div class="header-wrapper">
+    <a href="./index.html" class="logo">
+      <img
+        srcset="
+          ./img/header/img-header_1x.jpg 1x,
+          ./img/header/img-header_2x.jpg 2x
+        "
+        src="./img/header/img-header_1x.jpg"
+        alt="site logo"
+      />
+      <p class="logo-text">jefferson*</p>
+    </a>
+    <div class="navigation">
+      <span class="menu">Menu</span>
+      <nav class="navi is-open">
+        <ul class="nav-wrapper">
+          <li>
+            <a class="nav-link" href="#about-me">About me</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#benefits">Benefits</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#faq">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="open-menu-btn" type="button" aria-label="Open menu button">
+      <svg class="burger-menu" width="28" height="28">
+        <use href="../img/symbol-defs.svg#icon-mobile-menu"></use>
+      </svg>
+    </button>
+    <a href="#footer-order">
+      <button class="order-btn" type="button">Order the project</button>
+    </a>
+  </div>
+</header>
+
+<!--modal window-->
+<div class="backdrop">
+  <div class="modal">
+    <button
+      class="modal-close-btn"
+      type="button"
+      aria-label="Modal close button"
+    >
+      <svg class="close-icon" width="28" height="28">
+        <use href="/project-A1b2C3d4/assets/symbol-defs-a083d718.svg#icon-close"></use>
+      </svg>
+    </button>
+    <nav class="navi-modal">
+      <ul class="navi-modal-wrapper">
+        <li>
+          <a class="navi-modal-link" href="#about-me">About me</a>
+        </li>
+        <li>
+          <a class="navi-modal-link" href="#benefits">Benefits</a>
+        </li>
+        <li>
+          <a class="navi-modal-link" href="#projects">Projects</a>
+        </li>
+        <li>
+          <a class="navi-modal-link" href="#faq">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
     <main>
       
       <section class="section">
