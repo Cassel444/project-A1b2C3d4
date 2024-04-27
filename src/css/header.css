@@ -35,11 +35,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-
-  border-radius: 4px;
-  background-image: './img/Hero/Glass-effect-1@1x.red.png';
+  width: 100vw;
+  height: 100vh;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -47,17 +44,69 @@
   visibility: hidden;
   pointer-events: none;
 }
-.backdrop .is-open {
+.backdrop.is-open {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
+  z-index: 99;
 }
 .modal {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   top: 50%;
   left: 50%;
+  background-image: url('../img/Hero/Glass-effect-1@1x.red.png');
+  background-size: cover;
+  background-position: center;
+
+  width: 100vw;
+  height: 100vh;
+
   transform: translate(-50%, -50%) scale(1);
-  width: 100%;
-  min-height: 584px;
-  padding: 17px;
+}
+@media only screen and (max-width: 374.98px) and (min-resolution: 192dpi) {
+  .modal {
+    background-image: url('../img/Hero/Glass-effect-1@2x.red.png');
+  }
+}
+.modal-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+.close-icon {
+  stroke: #fafafa;
+  fill: #fafafa;
+}
+.navi-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navi-modal-wraper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.navi-modal-link {
+  color: #fafafa;
+  font-family: inherit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+  text-decoration-line: underline;
 }
