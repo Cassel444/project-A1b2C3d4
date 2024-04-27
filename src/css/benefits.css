@@ -1,20 +1,18 @@
 
 .benefits-container {
-
-    margin-top: 32px;
-    margin-bottom: 32px;
+    min-width: 320px;
     max-width: 375px;
     padding: 0 16px;
     margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
     .benefits-container {
         max-width: 768px;
         padding: 0 32px;
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
     .benefits-container {
         max-width: 1440px;
 
@@ -26,7 +24,7 @@
     gap: 16px;
    
 }
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
 .benefits-list {
 display: flex;
         flex-wrap: wrap;
@@ -52,24 +50,35 @@ font-family: "Inter Tight";
 font-size: 16px;
 font-style: normal;
 font-weight: 600;
-line-height: 24px;
+line-height: 1.5;
 /* 150% */
-letter-spacing: -0.32px;
+letter-spacing: -0.02em;
 text-transform: uppercase;
 margin-bottom: 32px;
 }
-@media screen and (min-width: 1440px) {
+@media only screen and (min-width: 1440px) {
 .benefits-title {
     margin-bottom: 0;
     width: 284px;
 }
 }
+.benefits-icon{
+    stroke: #FAFAFA;
+    fill: #ED3B44;
+    display: flex;
+        width: 48px;
+        height: 48px;
+        padding: 12px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+            background: #ED3B44;
+            margin-bottom: 64px;
 
-
-
+}
 .benefits-item {
     display: flex;
-        width: 344px;
+        width: 100%;
         padding: 24px;
         flex-direction: column;
         align-items: flex-start;
@@ -78,8 +87,16 @@ margin-bottom: 32px;
      background: #242527;
 
 }
-
-
+@media only screen and (min-width: 768px) {
+    .benefits-item {
+        width: 344px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .benefits-item {
+        width: 332px;
+    }
+}
 .benefits-chapter {
  margin-bottom: 8px;
 color: #FAFAFA;
@@ -89,9 +106,9 @@ color: #FAFAFA;
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
-    line-height: 30px;
+    line-height: 1.5;
     /* 150% */
-    letter-spacing: -0.4px;
+    letter-spacing: -0.02em;
 }
 
 .benefits-text {
@@ -102,9 +119,9 @@ font-family: "Inter Tight";
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
-line-height: 24px;
+line-height: 1.5;
 /* 150% */
-letter-spacing: -0.32px;
+letter-spacing: -0.02em;
 }
 
 .benefits-btn {
@@ -123,7 +140,7 @@ letter-spacing: -0.32px;
 .benefits-btn:focus {
 border: 1px solid #FAFAFA;
 }
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 .benefits-btn {
     margin-top: 64px;
 
