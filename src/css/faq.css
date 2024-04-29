@@ -5,25 +5,6 @@
   gap: 32px;
 }
 
-.faq-section {
-  max-width: 375px;
-  padding: 0 16px;
-  margin: 0 auto;
-}
-
-@media only screen and (min-width: 768px) {
-  .faq-section {
-    max-width: 768px;
-    padding: 0 32px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .faq-section {
-    max-width: 1440px;
-  }
-}
-
 .faq-head {
   color: #fafafa66;
   font-weight: 600;
