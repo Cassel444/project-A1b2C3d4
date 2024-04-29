@@ -3,39 +3,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 32px;
 }
 @media only screen and (min-width: 768px) {
-    .swiper-container {
-        margin-top: 32px;
-    }
-}
-@media only screen and (min-width: 1440px) {
     .swiper-container {
         margin-top: 64px;
     }
 }
-.swiper-wrapper {
+@media only screen and (min-width: 1440px) {
+    .swiper-container {
+        margin-top: 96px;
+    }
+}
+.skills-wrapper {
     width: 260px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 @media only screen and (min-width: 768px) {
-    .swiper-wrapper {
+    .skills-wrapper {
        width: 600px;
     }
 }
 @media only screen and (min-width: 1440px) {
-    .swiper-wrapper {
+    .skills-wrapper {
         width: 1200px;
     }
 }
 .red {
-    background-color: #ED3B44;
+    background-color: var(--change-color);
 }
 
-.swiper-slide {
+.skill-slide {
     border: 1px solid #FAFAFA33;
     border-radius: 50%;
     width: 130px;
@@ -49,7 +49,7 @@
     align-content: center;
 }
 @media only screen and (min-width: 768px) {
-    .swiper-slide {
+    .skill-slide {
         width: 200px;
         height: 200px;
         font-size: 20px;
@@ -57,28 +57,28 @@
     }
 }
 
-.swiper-slide:nth-child(-n+2) {
+.skill-slide:nth-child(-n+2) {
     display: block;
 }
-.swiper-slide:nth-child(n+3) {
+.skill-slide:nth-child(n+3) {
     display: none;
 }
  @media only screen and (min-width: 768px) {
-    .swiper-slide:nth-child(-n+3) {
+    .skill-slide:nth-child(-n+3) {
             display: block;
         }
     
-        .swiper-slide:nth-child(n+4) {
+        .skill-slide:nth-child(n+4) {
             display: none;
         }
  }
 
  @media only screen and (min-width: 1440px) {
-     .swiper-slide:nth-child(-n+6) {
+     .skill-slide:nth-child(-n+6) {
          display: block;
         } 
  }
-.btn-slide {
+.btn-slide-right {
     width: 28px;
     height: 28px;
     background-color: inherit;
@@ -87,14 +87,14 @@
     
 }
 @media only screen and (min-width: 768px) {
-    .btn-slide {
+    .btn-slide-right {
         width: 40px;
         height: 40px;
         margin-left: 64px;
     }    
 }
-@media only screen and (min-width: 768px) {
-    .btn-slide {
+@media only screen and (min-width: 1440px) {
+    .btn-slide-right {
         margin-left: 72px;
     }
 }
