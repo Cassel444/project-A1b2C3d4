@@ -1,5 +1,7 @@
-import Swiper from 'swiper';
-import 'swiper/css';
+import Swiper from 'swiper/bundle';
+
+// import styles bundle
+import 'swiper/css/bundle';
 import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
  function setupSwiper() {
@@ -7,6 +9,7 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
       modules: [Navigation, Mousewheel, Keyboard],
       direction: 'horizontal',
       speed: 500,
+        slidesPerView: 'auto',
       allowTouchMove: true,
       navigation: {
           nextEl: '.swiper-btn-right',
