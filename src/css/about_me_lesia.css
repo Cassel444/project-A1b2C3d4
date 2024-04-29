@@ -1,0 +1,113 @@
+
+.swiper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+@media only screen and (min-width: 768px) {
+    .swiper-container {
+        margin-top: 64px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .swiper-container {
+        margin-top: 96px;
+    }
+}
+.skills-wrapper {
+    width: 260px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+@media only screen and (min-width: 768px) {
+    .skills-wrapper {
+       width: 600px;
+    }
+}
+@media only screen and (min-width: 1440px) {
+    .skills-wrapper {
+        width: 1200px;
+    }
+}
+.red {
+    background-color: var(--change-color);
+}
+
+.skill-slide {
+    border: 1px solid #FAFAFA33;
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5em;
+    letter-spacing: -0.02em;
+    text-align: center;
+    align-content: center;
+}
+@media only screen and (min-width: 768px) {
+    .skill-slide {
+        width: 200px;
+        height: 200px;
+        font-size: 20px;
+        line-height: 1.21em;
+    }
+}
+
+.skill-slide:nth-child(-n+2) {
+    display: block;
+}
+.skill-slide:nth-child(n+3) {
+    display: none;
+}
+ @media only screen and (min-width: 768px) {
+    .skill-slide:nth-child(-n+3) {
+            display: block;
+        }
+    
+        .skill-slide:nth-child(n+4) {
+            display: none;
+        }
+ }
+
+ @media only screen and (min-width: 1440px) {
+     .skill-slide:nth-child(-n+6) {
+         display: block;
+        } 
+ }
+.btn-slide-right {
+    width: 28px;
+    height: 28px;
+    background-color: inherit;
+    border: none;
+    margin-left: 55px;
+    
+}
+@media only screen and (min-width: 768px) {
+    .btn-slide-right {
+        width: 40px;
+        height: 40px;
+        margin-left: 64px;
+    }    
+}
+@media only screen and (min-width: 1440px) {
+    .btn-slide-right {
+        margin-left: 72px;
+    }
+}
+.svg-slide {
+    width: 28px;
+    height: 28px;
+    stroke: #3B3B3B;
+    fill: #3B3B3B;
+}
+@media only screen and (min-width: 768px) {
+    .svg-slide {
+        width: 40px;
+        height: 40px;
+    }
+}
+
