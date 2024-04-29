@@ -1,3 +1,48 @@
+/* 1440 */
+
+@media only screen and (min-width: 1440px) {
+  .swiper-backface-hidden .swiper-slide {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-card .project-card-img .project-card-img-list-item {
+    padding: 120px 37px;
+  }
+
+  .project-card-info-list .project-card-info-list-item .project-skills {
+    margin-bottom: 191px;
+  }
+}
+
+/* 768 */
+
+@media only screen and (min-width: 768px) {
+  .project-skills .project-skills-item {
+    padding: 18px;
+  }
+
+  .swiper .project-info-list-item-title {
+    font-size: 44px; 
+    line-height: 100%;
+    letter-spacing: -1.32px;
+    max-width: 494px;
+  }
+
+  .project-card-img .project-card-img-list-item {
+    padding: 120px 45px;
+  }
+
+  .project-card-info-list-item .project-skills {
+    margin-bottom: 132px;
+  }
+
+  .project-card-info-list-item .project-button {
+    padding: 18px 50px;
+  }
+
+};
+
 /* 375 */
 
 .section-title {
@@ -51,15 +96,11 @@
   margin-bottom: 64px;
 }
 
-.info-list-item-title {
+.project-info-list-item-title {
   color: #1c1d20;
-
-  /* Mobile/H4 */
-  font-family: 'Inter Tight';
   font-size: 24px;
-  font-style: normal;
   font-weight: 500;
-  line-height: 28px; /* 116.667% */
+  line-height: 116%;
   letter-spacing: -0.72px;
 }
 
@@ -68,14 +109,6 @@
   border-radius: 60px;
   background-color: #ed3b44;
   color: #fafafa;
-
-  /* Mobile/Btn_text */
-  font-family: 'Inter Tight';
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.32px;
   border: 0;
 }
 
@@ -95,9 +128,9 @@
   stroke: #fafafa;
   border-radius: 60px;
   border: 1px solid rgba(250, 250, 250, 0.5);
-  width: 52px;
-  height: 52px;
   display: flex;
+  width: 54px;
+  height: 54px;
   justify-content: center;
   align-items: center;
 }
@@ -105,10 +138,29 @@
   transform: rotate(180deg);
 }
 
-.project-navigation {
+.projects-navigation {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
   margin-top: 32px;
+};
+
+.section-projects {
+  position: relative;
+}
+
+.section-projects .swiper {
+  height: 100%;
+};
+
+.project-button-link {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+}
+
+.swiper-btn-right-svg {
+  position: absolute;
+  z-index: 100;
 }

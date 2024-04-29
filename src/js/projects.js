@@ -1,14 +1,26 @@
-// import Swiper bundle with all modules installed
- import Swiper from 'swiper/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
+import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
 
- // import styles bundle
- import 'swiper/css/bundle';
+ function setupSwiper() {
+  return new Swiper('.mySwiper', {
+      modules: [Navigation, Mousewheel, Keyboard],
+      direction: 'horizontal',
+      speed: 500,
+      allowTouchMove: true,
+      navigation: {
+          nextEl: '.swiper-btn-right',
+          prevEl: '.swiper-btn-left',
+      },
+      mousewheel: {
+          invert: false,
+      },
+      keyboard: {
+          enabled: true,
+          onlyInViewport: true,
+          pageUpDown: true,
+      },
+  });
+}
 
-const swiper = new Swiper('.swiper', {
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-btn-right',
-    prevEl: '.swiper-btn-left',
-  }
-});
+setupSwiper();
