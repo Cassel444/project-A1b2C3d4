@@ -93,7 +93,7 @@
   stroke: #fafafa;
   border-radius: 50%;
   border: 1px solid #fafafa33;
-  background-image: url('../img/symbol-defs.svg');
+  background-image: url('./img/symbol-defs.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
