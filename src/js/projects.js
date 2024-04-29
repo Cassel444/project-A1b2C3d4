@@ -1,13 +1,14 @@
 // import Swiper bundle with all modules installed
-import Swiper from 'swiper/bundle';
+ import Swiper from 'swiper/bundle';
 
-// import styles bundle
-import 'swiper/css/bundle';
+ // import styles bundle
+ import 'swiper/css/bundle';
 
-// init Swiper:
-const swiper = new Swiper(".mySwiper", {
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+const swiper = new Swiper('.swiper', {
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-btn-right',
+    prevEl: '.swiper-btn-left',
+  }
+});
