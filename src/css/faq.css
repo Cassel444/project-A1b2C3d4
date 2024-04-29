@@ -5,10 +5,30 @@
   gap: 32px;
 }
 
+.faq-section {
+  max-width: 375px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .faq-section {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .faq-section {
+    max-width: 1440px;
+  }
+}
+
 .faq-head {
-  color: rgba(250, 250, 250, 0.40);
+  color: #fafafa66;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
 }
 
 .faq-list {
@@ -17,22 +37,49 @@
   gap: 20px;
 }
 
+.first-faq {
+  border-top: 1px solid #fafafa33;
+  padding-top: 20px;
+}
+
 @media only screen and (min-width: 1439.98px) {
   .faq-list {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+
+    gap: 0;
   }
 
   .first-faq {
     grid-row: 1/1;
+    padding: 32px 32px 32px 0;
+    border-right: 1px solid #fafafa33;
   }
 
   .second-faq {
     grid-row: 2/3;
+    padding: 32px 32px 32px 0;
+    border-right: 1px solid #fafafa33;
   }
 
   .third-faq {
-    grid-row: 3/3;
+    grid-row: 3/4;
+    padding: 32px 32px 32px 0;
+    border-right: 1px solid #fafafa33;
+  }
+
+  .four-faq {
+    padding: 32px 0 32px 32px;
+    border-top: 1px solid #fafafa33;
+  }
+
+  .five-faq {
+    padding: 32px 0 32px 32px;
+  }
+
+  .six-faq {
+    padding: 32px 0 32px 32px;
   }
 }
 
@@ -40,6 +87,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  border-bottom: 1px solid #fafafa33;
 }
 
 .faq-question {
@@ -52,6 +100,8 @@
   color: #fafafa;
   font-weight: 600;
   flex-grow: 1;
+  line-height: 1.5em;
+  letter-spacing: -0.025em;
 }
 
 .open-answer {
@@ -61,7 +111,7 @@
   fill: #1C1D20;
   stroke: #fafafa;
   border-radius: 50%;
-  border: 1px solid rgba(250, 250, 250, 0.2);
+  border: 1px solid #fafafa33;
   background-image: url('../img/symbol-defs.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -76,9 +126,11 @@
 }
 
 .faq-answer-element {
-  color: rgba(250, 250, 250, 0.60);
+  color: #fafafa99;
   line-height: 24px;
   font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.5em;
 }
 
 .menu-icon {
@@ -101,5 +153,5 @@
 
 .vector-line {
   height: 1px;
-  background-color: rgba(250, 250, 250, 0.2);
+  background-color: #fafafa33;
 }
