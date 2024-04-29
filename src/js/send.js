@@ -1,17 +1,29 @@
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
-import axios from 'axios';
-
 // зберігання форми
 const STORAGE_KEY = 'feedback-form-state';
 
 const form = document.querySelector('.footer-wrap-form');
 const emailInput = form.querySelector('.footer-form');
 const textarea = form.querySelector('.footer-textarea');
+const modalWindow = document.querySelector('.backdrop');
 
 form.addEventListener('input', onInputChange);
 form.addEventListener('submit', handleSubmit);
+modalWindow.addEventListener('click', closeModal);
+
+function closeModal(event) {
+  const target = event.target;
+  if (
+    target.classList.contains('backdrop') ||
+    target.classList.contains('close-icon')
+  ) {
+    modalWindow.classList.toggle('is-open');
+  }
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' || target.classList.contains('is-open')) {
+      modalWindow.classList.toggle('is-open');
+    }
+  });
+}
 
 populateForm();
 
@@ -35,6 +47,8 @@ function handleSubmit(event) {
 
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
+
+  modalWindow.classList.toggle('is-open');
 }
 
 function onInputChange() {
@@ -46,42 +60,7 @@ function onInputChange() {
     message: message,
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(savedForm));
-
-  // Виконуємо POST-запит на сервер за допомогою Axios
-  axios
-    .post('https://portfolio-js.b.goit.study/api', savedForm)
-    .then(response => {
-      console.log('Дані успішно відправлені на сервер:', response.data);
-      // Додайте будь-які інші дії, які вам потрібно виконати після успішного відправлення даних
-    })
-    .catch(error => {
-      console.error('Помилка під час відправки даних на сервер:', error);
-      // Додайте будь-які інші дії, які вам потрібно виконати у випадку помилки
-    });
 }
-//   fetch('https://portfolio-js.b.goit.study/api', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//       // Додайте будь-які інші заголовки, які можуть бути потрібні для вашого API
-//     },
-//     body: JSON.stringify(savedForm),
-//   })
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error('Network response was not ok');
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       console.log('Дані успішно відправлені на сервер:', data);
-//       // Додайте будь-які інші дії, які вам потрібно виконати після успішного відправлення даних
-//     })
-//     .catch(error => {
-//       console.error('Помилка під час відправки даних на сервер:', error);
-//       // Додайте будь-які інші дії, які вам потрібно виконати у випадку помилки
-//     });
-// }
 
 function populateForm() {
   const savedForm = localStorage.getItem(STORAGE_KEY);
@@ -92,30 +71,21 @@ function populateForm() {
   }
 }
 
-// запуск повідомлення
+// ============= post api
 
-// const sendBtm = form.querySelector('.footer-submit-btn');
+// const BASE_URL = 'https://portfolio-js.b.goit.study/api/';
 
-// form.addEventListener('click', function (event) {
-//   event.preventDefault();
-//   const target = event.target;
-//   if (target.classList.contains('footer-submit-btn')) {
-//     const imageUrl = target.dataset.source;
-//     const instance = SimpleLightbox.create(`<div>
-//     <h2>Thank you for your interest in cooperation!</h2>
-//       <p>The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
-//     </div>`);
-//     instance.show();
-//     document.addEventListener('keydown', function (event) {
-//       if (event.key === 'Escape' && instance) {
-//         instance.close();
-//       }
-//     });
+// const parameters = {
+//   method: 'POST',
+//   body: JSON.stringify(),
+//   headers: { 'Content-type': 'application/json' },
+// };
+
+// fetch(`${BASE_URL}?${parameters}`).then(response => {
+//   if (!response.ok) {
+//     throw new Error(response.statusText);
 //   }
+//   return response.json();
 // });
 
-// const lightbox = new SimpleLightbox('.gallery a', {
-//   captionsData: 'alt',
-//   captionPosition: 'bottom',
-//   captionDelay: 250,
-// });
+// ========= open modal window

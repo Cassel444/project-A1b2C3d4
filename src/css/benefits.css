@@ -47,13 +47,6 @@ margin-bottom: 32px;
 }
 }
 
-@media only screen and (min-width: 1440px) {
-    .box {
-    display:flex;
-    gap: 412px;
-    }
-}
-
 .benefits-list {
     display: flex;
     flex-wrap: wrap;
