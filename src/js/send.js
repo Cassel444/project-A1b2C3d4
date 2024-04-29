@@ -4,23 +4,23 @@ const STORAGE_KEY = 'feedback-form-state';
 const form = document.querySelector('.footer-wrap-form');
 const emailInput = form.querySelector('.footer-form');
 const textarea = form.querySelector('.footer-textarea');
-const modalWindow = document.querySelector('.backdrop');
+const modalSend = document.querySelector('.footer-backdrop');
 
 form.addEventListener('input', onInputChange);
 form.addEventListener('submit', handleSubmit);
-modalWindow.addEventListener('click', closeModal);
+modalSend.addEventListener('click', closeModal);
 
 function closeModal(event) {
   const target = event.target;
   if (
-    target.classList.contains('backdrop') ||
-    target.classList.contains('close-icon')
+    target.classList.contains('footer-backdrop') ||
+    target.classList.contains('footer-close-icon')
   ) {
-    modalWindow.classList.toggle('is-open');
+    modalSend.classList.toggle('pop-up');
   }
   document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' || target.classList.contains('is-open')) {
-      modalWindow.classList.toggle('is-open');
+    if (event.key === 'Escape' || target.classList.contains('pop-up')) {
+      modalSend.classList.toggle('pop-up');
     }
   });
 }
@@ -48,7 +48,7 @@ function handleSubmit(event) {
   localStorage.removeItem(STORAGE_KEY);
   form.reset();
 
-  modalWindow.classList.toggle('is-open');
+  modalSend.classList.toggle('pop-up');
 }
 
 function onInputChange() {
