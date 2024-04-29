@@ -34,7 +34,7 @@
     padding: 32px 24px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
-}
+    }
 
 
 
@@ -98,18 +98,14 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
-    .left-btn {
+    .left-btn .right-btn{
 
     padding: 18px;
 
     }
 }
 
-@media only screen and (min-width: 1440px) {
-    .right-btn {
-        padding: 18px;
-    }
-}
+
 
 .swiper {
     height: 302px;
@@ -129,19 +125,11 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
-    .menu-left-btn-icon {
+    .menu-left-btn-icon .menu-right-btn-icon {
         
     width: 32px;
      height: 32px;
     
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    .menu-right-btn-icon {
-        width: 32px;
-            height: 32px;
-            
     }
 }
 
