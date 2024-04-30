@@ -5,4 +5,5 @@ AOS.init({
   duration: 1200,
   once: true,
   mirror: false,
+  easing: 'ease-out-cubic',
 });
