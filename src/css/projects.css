@@ -172,3 +172,7 @@
   background-color: var(--hover-color);
   scale: 1.03;
 }
+
+.project-card-info-list-item {
+  margin-top: 20px;
+}
