@@ -1,24 +1,15 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
+.container {
+  margin: 0;
+}
 .gallery-box {
   transform: rotate(16deg);
+  width: 375px;
+  height: 508px;
 }
-
 .gallery-wrapper {
-  border: 1px solid red;
-  width: 1440px;
-  height: 960px;
+  width: 375px;
+  height: 508px;
   overflow: hidden;
   margin-right: auto;
   margin-left: auto;
@@ -26,41 +17,73 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  background: url(..//img/Covers/bg-covers-mobile.png);
 }
 #gallery {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 25px;
   flex-shrink: 0;
   list-style: none;
-  width: 1440px;
-  height: 960px;
+  width: 375px;
+  height: 508px;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   animation-name: moveRight;
   animation-duration: 25s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-  background: rgba(217, 217, 217, 0.04);
-  backdrop-filter: blur(15px);
 }
-
 .gallery-row {
   display: flex;
   justify-content: center;
-  gap: 32px;
+  gap: 25px;
 }
-
 .gallery-row:nth-child(even) {
   margin-left: 50%;
 }
-
-.gallery-row img {
-  width: 554px;
-  height: 314px;
+.cover-img {
+  width: 283px;
+  height: 163px;
 }
+/*Tablet*/
+@media only screen and (min-width: 768px) {
+  .gallery-box {
+    width: 768px;
+    height: 960px;
+  }
+}
+  .gallery-wrapper {
+    width: 768px;
+    height: 960px;
+    background: url(../img/Covers/bg-covers-tablet.png);
+  }
+  #gallery {
+    gap: 50px;
+    width: 768px;
+    height: 960px;
+  }
+  .gallery-row {
+    gap: 60px;
+  }
+  .cover-img {
+    width: 544px;
+    height: 314px;
+  }
 
+/*Desktop*/
+@media only screen and (min-width: 1440px) {
+  .gallery-box {
+    width: 1440px;
+  }
+  }
+  .gallery-wrapper {
+    width: 1440px;
+    background: url(../img/Covers/bg-covers-desktop.png);
+  }
+  #gallery {
+    width: 1440px;
+  }
 @keyframes moveRight {
   0% {
     transform: translateX(0);
