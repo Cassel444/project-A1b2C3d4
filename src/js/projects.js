@@ -1,15 +1,14 @@
-import Swiper from 'swiper/bundle';
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation, Mousewheel, Keyboard} from 'swiper/modules';
 
-// import styles bundle
-import 'swiper/css/bundle';
-import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
-
- function setupSwiper() {
+ function projectSwiper() {
   return new Swiper('.mySwiper', {
       modules: [Navigation, Mousewheel, Keyboard],
       direction: 'horizontal',
       speed: 500,
-        slidesPerView: 'auto',
+    slidesPerView: 1, // Показывать только 1 слайд за раз
       allowTouchMove: true,
       navigation: {
           nextEl: '.swiper-btn-right',
@@ -26,4 +25,4 @@ import { Navigation, Mousewheel, Keyboard } from 'swiper/modules';
   });
 }
 
-setupSwiper();
+projectSwiper();
