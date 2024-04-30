@@ -6,4 +6,6 @@ AOS.init({
   once: true,
   mirror: false,
   easing: 'ease-out-cubic',
+  anchorPlacement: 'bottom-bottom',
+  offset: 50,
 });
