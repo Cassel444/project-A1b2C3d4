@@ -1,7 +1,19 @@
 /* 1440 */
 
 @media only screen and (min-width: 1440px) {
-  .swiper-backface-hidden .swiper-slide {
+  .swiper-slide {
+    margin-right: 0; /* Убираем правый отступ у каждого слайда */
+  }
+
+  .swiper-wrapper {
+    display: flex; /* Убираем отступы между слайдами */
+  }
+
+  .swiper-container {
+    width: 100%;
+  }
+
+  .section-projects .project-card {
     display: flex;
     flex-direction: row;
   }
@@ -157,13 +169,4 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.32px;
-}
-
-.swiper-btn-right-svg {
-  position: absolute;
-  z-index: 100;
-}
-
-.project-card {
-  width: 100% !important;
 }

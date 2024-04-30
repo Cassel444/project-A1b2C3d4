@@ -24,7 +24,7 @@ async function fetchReviews() {
 }
 
 function setupSwiper() {
-  return new Swiper('.swiper', {
+  return new Swiper('.swiper-reviews', {
     modules: [Navigation, Mousewheel, Keyboard],
     watchOverflow: true,
     navigation: {
@@ -51,7 +51,9 @@ function setupSwiper() {
       },
     },
   });
-}
+};
+
+setupSwiper();
 
 async function renderReviews() {
   try {
