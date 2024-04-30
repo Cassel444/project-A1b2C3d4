@@ -131,7 +131,7 @@
 .footer-submit-btn {
   width: 100px;
   height: 100px;
-  background-color: #ed3b44;
+  background-color: var(--change-color);
   border: none;
   border-radius: 50%;
 
@@ -146,8 +146,8 @@
 
 .footer-submit-btn:hover,
 .footer-submit-btn:focus {
-  box-shadow: 0 0px 15px #e0373f;
-  background-color: #e0373f;
+  box-shadow: 0 0px 15px var(--hover-color);
+  background-color: var(--hover-color);
   scale: 1.03;
 }
 
@@ -186,9 +186,7 @@
 .footer-contact:hover,
 .footer-contact:focus {
   border: 1px solid #fafafa;
-  scale: 1.03;
-  /* transform: translateY(-3%); */
-  box-shadow: 0 0px 30px rgba(166, 166, 166, 0.2);
+  box-shadow: 0 0px 50px rgba(166, 166, 166, 0.2);
 }
 @media only screen and (min-width: 768px) {
   .footer-contact {
