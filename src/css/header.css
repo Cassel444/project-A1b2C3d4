@@ -159,7 +159,7 @@ html {
   justify-content: center;
   top: 50%;
   left: 50%;
-  background-image: url('../img/Hero/Glass-effect-1@1x.red.png');
+  background-image: url('../img/Hero-BG/HeroMobile@1x.png');
   background-size: cover;
   background-position: center;
 
@@ -170,7 +170,7 @@ html {
 }
 @media only screen and (max-width: 374.98px) and (min-resolution: 192dpi) {
   .modal {
-    background-image: url('../img/Hero/Glass-effect-1@2x.red.png');
+    background-image: url('../img/Hero-BG/HeroMobile@2x.png');
   }
 }
 
