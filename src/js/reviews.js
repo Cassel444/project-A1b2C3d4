@@ -67,7 +67,7 @@ async function renderReviews() {
     reviewsList.insertAdjacentHTML('beforeend', reviewHtml);
     setupSwiper();
   } catch (error) {
-    reviewsList.textContent = 'Review data is not available'; 
+    reviewsList.textContent = 'Not found'; 
     console.error('Error in renderReviews:', error.message); 
   }
 }
