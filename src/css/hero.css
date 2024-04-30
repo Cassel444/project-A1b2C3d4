@@ -13,7 +13,8 @@
 @media (min-resolution: 192dpi) {
   .hero-section {
     background-image: url(../img/Hero-BG/ed3b44@2x.png);
-  }
+    
+  } 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1439.98px) {
