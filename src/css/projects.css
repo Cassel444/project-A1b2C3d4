@@ -1,6 +1,14 @@
 /* 1440 */
 
 @media only screen and (min-width: 1440px) {
+  .project-card .project-card-info {
+    border-radius: 24px 0 0 24px;
+  }
+
+  .project-card .project-card-img {
+    border-radius: 0 24px 24px 0;
+  }
+
   .section-projects .project-card {
     display: grid;
     grid-template-areas: 'info pr-img';
@@ -46,9 +54,7 @@
 
 .section-title {
   color: rgba(250, 250, 250, 0.4);
-  font-family: 'Inter Tight';
   font-size: 16px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px; /* 150% */
   letter-spacing: -0.32px;
@@ -73,11 +79,7 @@
 
 .project-skills-item {
   color: #1c1d20;
-
-  /* Mobile/Btn_text */
-  font-family: 'Inter Tight';
   font-size: 16px;
-  font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
