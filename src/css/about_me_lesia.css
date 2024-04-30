@@ -73,6 +73,7 @@ ul.skills-wrapper>li.skill-slide:hover {
 }
 
 button.btn-slide-right {
+    border-radius: 50%;
     display: flex;
     width: 28px;
     height: 28px;
