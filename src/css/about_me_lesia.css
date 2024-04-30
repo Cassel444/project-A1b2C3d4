@@ -7,7 +7,6 @@
 
 div.skills-container {
     display: flex;
-    
     width: 260px;
     overflow: hidden;
     margin-top: 32px;
@@ -27,6 +26,7 @@ div.skills-container {
 }
 
 ul.skills-wrapper {
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -36,6 +36,9 @@ ul.skills-wrapper {
 
 ul.skills-wrapper>li.red {
     background-color: var(--change-color);
+}
+ul.skills-wrapper>li.red:hover {
+    background-color: var(--hover-color);
 }
 
 ul.skills-wrapper>li.skill-slide {
