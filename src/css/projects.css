@@ -118,7 +118,7 @@
 }
 
 .project-button:hover,
-:focus {
+.project-button:focus {
   box-shadow: 0 0px 15px var(--hover-color);
   background-color: var(--hover-color);
   scale: 1.03;
