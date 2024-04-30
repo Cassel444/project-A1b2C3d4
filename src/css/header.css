@@ -21,6 +21,11 @@ html {
   gap: 8px;
   align-items: flex-start;
   justify-content: center;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.logo:hover,
+.logo:focus{
+  scale: 1.03;
 }
 .logo img {
   width: 80px;
@@ -46,9 +51,11 @@ html {
   font-weight: 500;
   letter-spacing: -0.02em;
   text-decoration-line: underline;
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu:hover,
 .menu:focus {
+  scale: 1.07;
   color: var(--change-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -74,17 +81,24 @@ html {
   align-items: center;
   justify-content: center;
 }
+.nav-item {
+  transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav-item:hover,
+.nav-item:focus{
+  scale: 1.07;
+}
 .nav-link {
   color: #fafafa;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link:hover,
 .nav-link:focus {
   color: var(--change-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+ }
 .open-menu-btn {
   display: flex;
   align-items: center;
@@ -97,7 +111,7 @@ html {
 }
 .open-menu-btn:hover,
 .open-menu-btn:focus {
-  scale: 1.1;
+  scale: 1.07;
 }
 @media only screen and (min-width: 768px) {
   .open-menu-btn {
@@ -119,13 +133,16 @@ html {
   border: none;
   font-weight: 500;
   letter-spacing: -0.02em;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-btn:hover,
 .order-btn:focus {
+  box-shadow: 0 0px 15px var(--hover-color);
   background-color: var(--hover-color);
-  scale: 1.1;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  scale: 1.03;
+  
 }
 
 .backdrop {
@@ -159,7 +176,7 @@ html {
   justify-content: center;
   top: 50%;
   left: 50%;
-  background-image: url('../img/Hero/Glass-effect-1@1x.red.png');
+  background-image: url('../img/Hero-BG/HeroMobile@1x.png');
   background-size: cover;
   background-position: center;
 
@@ -170,7 +187,7 @@ html {
 }
 @media only screen and (max-width: 374.98px) and (min-resolution: 192dpi) {
   .modal {
-    background-image: url('../img/Hero/Glass-effect-1@2x.red.png');
+    background-image: url('../img/Hero-BG/HeroMobile@2x.png');
   }
 }
 
@@ -189,7 +206,7 @@ html {
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  scale: 1.1;
+  scale: 1.07;
 }
 .close-icon {
   stroke: #fafafa;

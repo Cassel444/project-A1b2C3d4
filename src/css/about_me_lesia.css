@@ -1,108 +1,113 @@
 
 .about-me-wrapper {
-    display: flex;
-    align-items: baseline;
-    justify-content: center;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
 }
 
 div.skills-container {
-    display: flex;
-    width: 260px;
-    overflow: hidden;
-    margin-top: 32px;
+  display: flex;
+  width: 260px;
+  overflow: hidden;
+  margin-top: 32px;
 }
 @media only screen and (min-width: 768px) {
-    div.skills-container {
-        width: 600px;
-        margin-top: 64px;
-    }
+ div.skills-container {
+  width: 600px;
+  margin-top: 64px;
+ }
 }
 
 @media only screen and (min-width: 1440px) {
-    div.skills-container {
-        width: 1200px;
-        margin-top: 96px;
-    }
+ div.skills-container {
+  width: 1200px;
+  margin-top: 96px;
+ }
 }
 
 ul.skills-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    margin: 10px 0 10px 0;
-    padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 10px 0 10px 0;
+  padding: 0;
 }
 
 ul.skills-wrapper>li.red {
-    background-color: var(--change-color);
+  background-color: var(--change-color);
 }
 ul.skills-wrapper>li.red:hover {
-    background-color: var(--hover-color);
-    border: none;
+  background-color: var(--hover-color);
+  border: none;
 }
 
 ul.skills-wrapper>li.skill-slide {
-    border: 1px solid #fafafa33;
-    border-radius: 50%;
-    width: 130px;
-    height: 130px;
-    display: flex;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5em;
-    letter-spacing: -0.02em;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid #fafafa33;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5em;
+  letter-spacing: -0.02em;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 ul.skills-wrapper>li.skill-slide:hover {
-   scale: 1.03;
-   border: 1px solid #fafafa;
-   box-shadow: 0 0px 15px rgba(166, 166, 166, 0.2);
+  scale: 1.03;
+  border: 1px solid #fafafa;
+  box-shadow: 0 0px 15px rgba(166, 166, 166, 0.2);
 }
 @media only screen and (min-width: 768px) {
-    ul.skills-wrapper>li.skill-slide {
-        width: 200px;
-        height: 200px;
-        font-size: 20px;
-        line-height: 1.21em;
-    }
+ul.skills-wrapper>li.skill-slide {
+  width: 200px;
+  height: 200px;
+  font-size: 20px;
+  line-height: 1.21em;
+ }
 }
 
 button.btn-slide-right {
-    border-radius: 50%;
-    display: flex;
-    width: 28px;
-    height: 28px;
-    background-color: inherit;
-    border: none;
-    margin-left: 55px;
+  border-radius: 50%;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  background-color: inherit;
+  border: none;
+  margin-left: 55px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+button.btn-slide-right:hover {
+  border: 1px solid #fafafa;
+  box-shadow: 0 0px 50px rgba(166, 166, 166, 0.2);
 }
 @media only screen and (min-width: 768px) {
-    button.btn-slide-right {
-        width: 40px;
-        height: 40px;
-        margin-left: 64px;
-        
-    }
+  button.btn-slide-right {
+   width: 40px;
+   height: 40px;
+   margin-left: 64px;   
+  }
 }
 @media only screen and (min-width: 1440px) {
-    button.btn-slide-right {
-        margin-left: 72px;
-    }
+  button.btn-slide-right {
+   margin-left: 72px;
+  }
 }
 .svg-slide {
-    width: 28px;
-    height: 28px;
-    stroke: #3B3B3B;
-    fill: none;
+  width: 28px;
+  height: 28px;
+  stroke: #3B3B3B;
+  fill: none;
 }
 @media only screen and (min-width: 768px) {
-    .svg-slide {
-        width: 40px;
-        height: 40px;
-    }
+  .svg-slide {
+    width: 40px;
+    height: 40px;
+  }
 }
