@@ -354,34 +354,3 @@ h1 .appearing:last-child {
     transform: translateY(0) scaleX(1) scaleY(1);
   }
 }
-@media screen and (min-width: 5000px) {
-  .hero-section {
-    background-image: url(../img/Hero-BG/2b4441@1x.png);
-  }
-}
-@media screen and (min-width: 5100px) {
-  .hero-section {
-    background-image: url(../img/Hero-BG/0041e8@1x.png);
-  }
-}
-
-@media screen and (min-width: 5200px) {
-  .hero-section {
-    background-image: url(../img/Hero-BG/c6e327@1x.png);
-  }
-}
-@media screen and (min-width: 5300px) {
-  .hero-section {
-    background-image: url(../img/Hero-BG/e6533c@1x.png);
-  }
-}
-@media screen and (min-width: 5400px) {
-  .hero-section {
-    background-image: url(../img/Hero-BG/ed3b44@1x.png);
-  }
-}
-@media screen and (min-width: 5500px) {
-  .hero-section {
-    background-image: url(../img/Hero-BG/ff7f08@1x.png);
-  }
-}
