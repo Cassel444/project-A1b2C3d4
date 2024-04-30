@@ -42,6 +42,7 @@
           name="comment"
           id="comment"
           rows="1"
+          autocomplete="off"
         ></textarea>
         <button class="footer-submit-btn" type="submit">send</button>
       </form>
@@ -59,9 +60,13 @@
   </div>
 
   <!-- modal window -->
-  <div class="footer-backdrop">
+  <div class="footer-backdrop is-hidden">
     <div class="footer-modal">
-      <button class="modal-btn" type="button" aria-label="modal close button">
+      <button
+        class="footer-modal-btn"
+        type="button"
+        aria-label="modal close button"
+      >
         <svg class="footer-close-icon" width="22" height="22">
           <use href="./img/symbol-defs.svg#icon-close"></use>
         </svg>
