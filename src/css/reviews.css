@@ -3,6 +3,10 @@
   padding-bottom: 32px;
 }
 
+.swiper-reviews {
+  overflow: hidden;
+}
+
 .title-review {
   margin-bottom: 32px;
   text-transform: uppercase;
