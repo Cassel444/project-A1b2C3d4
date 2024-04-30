@@ -1,13 +1,12 @@
+
 .container {
   margin: 0;
 }
-
 .gallery-box {
   transform: rotate(16deg);
   width: 375px;
   height: 508px;
 }
-
 .gallery-wrapper {
   width: 375px;
   height: 508px;
@@ -20,7 +19,6 @@
   position: relative;
   background: url(..//img/Covers/bg-covers-mobile.png);
 }
-
 #gallery {
   display: flex;
   flex-direction: column;
@@ -36,66 +34,56 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
-
 .gallery-row {
   display: flex;
   justify-content: center;
   gap: 25px;
 }
-
 .gallery-row:nth-child(even) {
   margin-left: 50%;
 }
-
 .cover-img {
   width: 283px;
   height: 163px;
 }
-
 /*Tablet*/
 @media only screen and (min-width: 768px) {
   .gallery-box {
     width: 768px;
     height: 960px;
   }
-
+}
   .gallery-wrapper {
     width: 768px;
     height: 960px;
     background: url(../img/Covers/bg-covers-tablet.png);
   }
-
   #gallery {
     gap: 50px;
     width: 768px;
     height: 960px;
   }
-
   .gallery-row {
     gap: 60px;
   }
-
   .cover-img {
     width: 544px;
     height: 314px;
   }
-}
+
 /*Desktop*/
 @media only screen and (min-width: 1440px) {
   .gallery-box {
     width: 1440px;
   }
-
+  }
   .gallery-wrapper {
     width: 1440px;
     background: url(../img/Covers/bg-covers-desktop.png);
   }
-
   #gallery {
     width: 1440px;
   }
-}
-
 @keyframes moveRight {
   0% {
     transform: translateX(0);

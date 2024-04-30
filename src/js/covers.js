@@ -12,6 +12,7 @@ function getRandomIndices(limit, count) {
 
 function createGallery() {
   const imageElements = section.querySelectorAll('.cover-list-item');
+
   const galleryWrapper = document.createElement('div'); 
   galleryWrapper.className = 'gallery-wrapper'; 
 
@@ -20,6 +21,7 @@ function createGallery() {
 
   const gallery = document.createElement('div'); 
   gallery.id = 'gallery'; 
+
 
   const rows = [];
 
@@ -43,6 +45,7 @@ function createGallery() {
 
   galleryBox.appendChild(gallery);
   galleryWrapper.appendChild(galleryBox);
+
   section.appendChild(galleryWrapper); 
 
   function isElementInViewport(el) {
