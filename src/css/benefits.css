@@ -25,9 +25,7 @@
     width: 696px;
     height: 675px;
 }
-}
 
-@media only screen and (min-width: 1440px) {
 .right-side {
     width: 680px;
     height: 675px;
@@ -91,10 +89,10 @@ margin-bottom: 32px;
     }
 }
 
-benefits-item:hover {
+/*.benefits-item:hover {
     scale: 1.03;
     border: 1px solid rgba(250, 250, 250, 0.20);
-}
+}*/
 
 
 .benefits-chapter {
