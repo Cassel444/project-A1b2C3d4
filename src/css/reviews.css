@@ -34,7 +34,7 @@
     padding: 32px 24px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
-    }
+}
 
 
 
@@ -66,24 +66,24 @@
 
 .left-btn {
     display: flex;
-        padding: 14px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        border: 1px solid rgba(250, 250, 250, 0.50);
-        fill: none;
-        stroke: white;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.50);
+    fill: none;
+    stroke: white;
 }
 
 .right-btn {
     display: flex;
-        padding: 14px;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        border: 1px solid rgba(250, 250, 250, 0.50);
-        fill: none;
-        stroke: white;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid rgba(250, 250, 250, 0.50);
+    fill: none;
+    stroke: white;
 
 }
 
@@ -98,9 +98,9 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
-    .left-btn .right-btn{
+    .left-btn .right-btn {
 
-    padding: 18px;
+        padding: 18px;
 
     }
 }
@@ -126,10 +126,10 @@ button {
 
 @media only screen and (min-width: 768px) {
     .menu-left-btn-icon .menu-right-btn-icon {
-        
-    width: 32px;
-     height: 32px;
-    
+
+        width: 32px;
+        height: 32px;
+
     }
 }
 
