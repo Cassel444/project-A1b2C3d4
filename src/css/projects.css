@@ -108,9 +108,18 @@
 .project-button {
   padding: 13px 32px;
   border-radius: 60px;
-  background-color: #ed3b44;
   color: #fafafa;
   border: 0;
+  background-color: var(--change-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-button:hover,
+:focus {
+  box-shadow: 0 0px 15px var(--hover-color);
+  background-color: var(--hover-color);
+  scale: 1.03;
 }
 
 .project-card-img-list-item {
