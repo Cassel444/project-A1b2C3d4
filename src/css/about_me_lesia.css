@@ -1,42 +1,51 @@
 
-.swiper-container {
+.about-me-wrapper {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
+}
+
+div.skills-container {
+    display: flex;
+    width: 260px;
+    overflow: hidden;
     margin-top: 32px;
 }
 @media only screen and (min-width: 768px) {
-    .swiper-container {
+    div.skills-container {
+        width: 600px;
         margin-top: 64px;
     }
 }
+
 @media only screen and (min-width: 1440px) {
-    .swiper-container {
+    div.skills-container {
+        width: 1200px;
         margin-top: 96px;
     }
 }
-.skills-wrapper {
-    width: 260px;
+
+ul.skills-wrapper {
+    position: relative;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-}
-@media only screen and (min-width: 768px) {
-    .skills-wrapper {
-       width: 600px;
-    }
-}
-@media only screen and (min-width: 1440px) {
-    .skills-wrapper {
-        width: 1200px;
-    }
-}
-.red {
-    background-color: var(--change-color);
+    margin: 10px 0 10px 0;
+    padding: 0;
 }
 
-.skill-slide {
-    border: 1px solid #FAFAFA33;
+ul.skills-wrapper>li.red {
+    background-color: var(--change-color);
+}
+ul.skills-wrapper>li.red:hover {
+    background-color: var(--hover-color);
+    border: none;
+}
+
+ul.skills-wrapper>li.skill-slide {
+    border: 1px solid #fafafa33;
     border-radius: 50%;
     width: 130px;
     height: 130px;
@@ -45,11 +54,17 @@
     font-size: 16px;
     line-height: 1.5em;
     letter-spacing: -0.02em;
-    text-align: center;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+ul.skills-wrapper>li.skill-slide:hover {
+   scale: 1.03;
+   border: 1px solid #fafafa;
+   box-shadow: 0 0px 15px rgba(166, 166, 166, 0.2);
 }
 @media only screen and (min-width: 768px) {
-    .skill-slide {
+    ul.skills-wrapper>li.skill-slide {
         width: 200px;
         height: 200px;
         font-size: 20px;
@@ -57,44 +72,25 @@
     }
 }
 
-.skill-slide:nth-child(-n+2) {
-    display: block;
-}
-.skill-slide:nth-child(n+3) {
-    display: none;
-}
- @media only screen and (min-width: 768px) {
-    .skill-slide:nth-child(-n+3) {
-            display: block;
-        }
-    
-        .skill-slide:nth-child(n+4) {
-            display: none;
-        }
- }
-
- @media only screen and (min-width: 1440px) {
-     .skill-slide:nth-child(-n+6) {
-         display: block;
-        } 
- }
-.btn-slide-right {
+button.btn-slide-right {
+    border-radius: 50%;
+    display: flex;
     width: 28px;
     height: 28px;
     background-color: inherit;
     border: none;
     margin-left: 55px;
-    
 }
 @media only screen and (min-width: 768px) {
-    .btn-slide-right {
+    button.btn-slide-right {
         width: 40px;
         height: 40px;
         margin-left: 64px;
-    }    
+        
+    }
 }
 @media only screen and (min-width: 1440px) {
-    .btn-slide-right {
+    button.btn-slide-right {
         margin-left: 72px;
     }
 }
@@ -102,7 +98,7 @@
     width: 28px;
     height: 28px;
     stroke: #3B3B3B;
-    fill: #3B3B3B;
+    fill: none;
 }
 @media only screen and (min-width: 768px) {
     .svg-slide {

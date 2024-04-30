@@ -1,21 +1,9 @@
 /* 1440 */
 
 @media only screen and (min-width: 1440px) {
-  .swiper-slide {
-    margin-right: 0; /* Убираем правый отступ у каждого слайда */
-  }
-
-  .swiper-wrapper {
-    display: flex; /* Убираем отступы между слайдами */
-  }
-
-  .swiper-container {
-    width: 100%;
-  }
-
   .section-projects .project-card {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas: 'info pr-img';
   }
 
   .project-card .project-card-img .project-card-img-list-item {
@@ -69,6 +57,8 @@
 }
 
 .project-card-info {
+  display: grid;
+  grid-area: info;
   max-width: 100%;
   background-color: #fff;
   border-radius: 24px 24px 0px 0px;
@@ -118,9 +108,18 @@
 .project-button {
   padding: 13px 32px;
   border-radius: 60px;
-  background-color: #ed3b44;
   color: #fafafa;
   border: 0;
+  background-color: var(--change-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-button:hover,
+:focus {
+  box-shadow: 0 0px 15px var(--hover-color);
+  background-color: var(--hover-color);
+  scale: 1.03;
 }
 
 .project-card-img-list-item {
@@ -128,6 +127,8 @@
 }
 
 .project-card-img {
+  display: grid;
+  grid-area: pr-img;
   background-color: #242527;
   display: flex;
   justify-content: center;
