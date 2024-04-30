@@ -23,7 +23,7 @@
     <script type="module" crossorigin src="/project-A1b2C3d4/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/project-A1b2C3d4/assets/vendor-4213e64d.js">
     <link rel="stylesheet" href="/project-A1b2C3d4/assets/vendor-1f9fe898.css">
-    <link rel="stylesheet" href="/project-A1b2C3d4/assets/index-8bc7585e.css">
+    <link rel="stylesheet" href="/project-A1b2C3d4/assets/index-20695e2d.css">
   </head>
   <body>
     <header class="header">
@@ -805,6 +805,7 @@
           name="comment"
           id="comment"
           rows="1"
+          autocomplete="off"
         ></textarea>
         <button class="footer-submit-btn" type="submit">send</button>
       </form>
@@ -822,9 +823,13 @@
   </div>
 
   <!-- modal window -->
-  <div class="footer-backdrop">
+  <div class="footer-backdrop is-hidden">
     <div class="footer-modal">
-      <button class="modal-btn" type="button" aria-label="modal close button">
+      <button
+        class="footer-modal-btn"
+        type="button"
+        aria-label="modal close button"
+      >
         <svg class="footer-close-icon" width="22" height="22">
           <use href="/project-A1b2C3d4/assets/symbol-defs-9d086983.svg#icon-close"></use>
         </svg>
