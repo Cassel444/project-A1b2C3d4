@@ -29,7 +29,7 @@ async function fetchReviews() {
 }
 
 function setupSwiper() {
-  return new Swiper('.swiper', {
+  return new Swiper('.swiper-reviews', {
     modules: [Navigation, Mousewheel, Keyboard],
     direction: 'horizontal',
     slidesPerView: 1,
