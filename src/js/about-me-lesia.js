@@ -61,25 +61,3 @@ btnRight.addEventListener('click', function () {
         swiper.slideNext();
     }
 });
-// import Swiper bundle with all modules installed
-// import Swiper from 'swiper/bundle';
-
-// // import styles bundle
-// import 'swiper/css/bundle';
-
-
-
-
-// const swiper = new Swiper('.swiper-container', {
-//     direction: 'horizontal',
-//     loop: true,
-
-//     navigation: {
-//         nextEl: '.btn-slide-right',
-//     },
-//     breakpoints: {
-//         320: { slidesPerView: 2 },
-//         768: { slidesPerView: 3 },
-//         1440: { slidesPerView: 6 },
-//     },
-// });

@@ -1,8 +1,8 @@
 
 .about-me-wrapper {
-    position: relative;
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: center;
 }
 
 div.skills-container {
@@ -28,10 +28,12 @@ div.skills-container {
 ul.skills-wrapper {
     position: relative;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
-    
+    margin: 10px 0 10px 0;
+    padding: 0;
 }
 
 ul.skills-wrapper>li.red {
@@ -39,6 +41,7 @@ ul.skills-wrapper>li.red {
 }
 ul.skills-wrapper>li.red:hover {
     background-color: var(--hover-color);
+    border: none;
 }
 
 ul.skills-wrapper>li.skill-slide {
@@ -53,6 +56,12 @@ ul.skills-wrapper>li.skill-slide {
     letter-spacing: -0.02em;
     justify-content: center;
     align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+ul.skills-wrapper>li.skill-slide:hover {
+   scale: 1.03;
+   border: 1px solid #fafafa;
+   box-shadow: 0 0px 15px rgba(166, 166, 166, 0.2);
 }
 @media only screen and (min-width: 768px) {
     ul.skills-wrapper>li.skill-slide {
@@ -64,30 +73,32 @@ ul.skills-wrapper>li.skill-slide {
 }
 
 button.btn-slide-right {
-    position: absolute;
     display: flex;
     width: 28px;
     height: 28px;
     background-color: inherit;
     border: none;
-   
+    margin-left: 55px;
 }
 @media only screen and (min-width: 768px) {
     button.btn-slide-right {
         width: 40px;
         height: 40px;
+        margin-left: 64px;
         
     }
 }
-
-
+@media only screen and (min-width: 1440px) {
+    button.btn-slide-right {
+        margin-left: 72px;
+    }
+}
 .svg-slide {
     width: 28px;
     height: 28px;
     stroke: #3B3B3B;
     fill: none;
 }
-
 @media only screen and (min-width: 768px) {
     .svg-slide {
         width: 40px;
