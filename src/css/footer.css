@@ -59,7 +59,7 @@
   overflow: hidden;
 }
 .accent {
-  color: #ed3b44;
+  color: var(--change-color);
 }
 
 .footer-wrap-form {
@@ -141,7 +141,8 @@
   letter-spacing: -0.02em;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-submit-btn:hover,
