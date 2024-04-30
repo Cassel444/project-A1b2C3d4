@@ -146,6 +146,7 @@
 
 .footer-submit-btn:hover,
 .footer-submit-btn:focus {
+  box-shadow: 0 0px 15px #e0373f;
   background-color: #e0373f;
   scale: 1.03;
 }
@@ -186,8 +187,8 @@
 .footer-contact:focus {
   border: 1px solid #fafafa;
   scale: 1.03;
-  transform: translateY(-3%);
-  box-shadow: 0 8px 16px rgba(166, 166, 166, 0.2);
+  /* transform: translateY(-3%); */
+  box-shadow: 0 0px 30px rgba(166, 166, 166, 0.2);
 }
 @media only screen and (min-width: 768px) {
   .footer-contact {
@@ -219,17 +220,17 @@
   transition: opacity 0.8s ease 0s,
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  cursor: pointer;
-}
-
-.footer-backdrop.pop-up {
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
   z-index: 999;
+  cursor: pointer;
+}
+
+.footer-backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .footer-modal {
@@ -263,7 +264,7 @@
   }
 }
 
-.modal-btn {
+.footer-modal-btn {
   position: absolute;
   top: 20px;
   right: 20px;

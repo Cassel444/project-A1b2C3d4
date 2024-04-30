@@ -1,5 +1,5 @@
-// зберігання форми
 const STORAGE_KEY = 'feedback-form-state';
+const BASE_URL = 'https://portfolio-js.b.goit.study/api/requests';
 
 const form = document.querySelector('.footer-wrap-form');
 const emailInput = form.querySelector('.footer-form');
@@ -10,45 +10,87 @@ form.addEventListener('input', onInputChange);
 form.addEventListener('submit', handleSubmit);
 modalSend.addEventListener('click', closeModal);
 
+window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    modalSend.classList.add('is-hidden');
+  }
+});
+
+textarea.addEventListener('blur', function () {
+  const maxLength = 25;
+  if (this.value.length > maxLength) {
+    const truncatedValue = this.value.slice(0, this.maxLength);
+    this.value = truncatedValue + '...';
+  }
+});
+textarea.addEventListener('focus', function () {
+  if (this.value.endsWith('...')) {
+    this.value = this.value.slice(0, -3);
+  }
+});
+
+savedUnSubmit();
+function savedUnSubmit() {
+  const savedForm = localStorage.getItem(STORAGE_KEY);
+  if (savedForm) {
+    const { email, message } = JSON.parse(savedForm);
+    emailInput.value = email || '';
+    textarea.value = message || '';
+  }
+}
+
 function closeModal(event) {
   const target = event.target;
   if (
     target.classList.contains('footer-backdrop') ||
     target.classList.contains('footer-close-icon')
   ) {
-    modalSend.classList.toggle('pop-up');
+    modalSend.classList.add('is-hidden');
   }
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' || target.classList.contains('pop-up')) {
-      modalSend.classList.toggle('pop-up');
-    }
-  });
 }
 
-populateForm();
+async function handleSubmit(event) {
+  try {
+    event.preventDefault();
+    if (emailInput.value === '' || textarea.value === '') {
+      return alert('Please fill out all forms');
+    }
+    const savedForm = {
+      email: emailInput.value.trim(),
+      comment: textarea.value.trim(),
+    };
+    await postData({
+      email: savedForm.email,
+      comment: savedForm.comment,
+    });
 
-function handleSubmit(event) {
-  event.preventDefault();
+    localStorage.removeItem(STORAGE_KEY);
+    form.reset();
 
-  const email = emailInput.value.trim();
-  const message = textarea.value.trim();
-
-  if (email === '' || message === '') {
-    alert('Please fill in all fields before submitting.');
-    return;
+    modalSend.classList.remove('is-hidden');
+  } catch (error) {
+    console.log(error);
   }
+}
 
-  const formData = {
-    email: email,
-    message: message,
-  };
-
-  console.log(formData);
-
-  localStorage.removeItem(STORAGE_KEY);
-  form.reset();
-
-  modalSend.classList.toggle('pop-up');
+function postData(data) {
+  try {
+    return fetch(BASE_URL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }).then(response => {
+      if (!response.ok) {
+        throw new Error(response.status || response.statusText);
+      }
+      return response.json();
+    });
+  } catch (error) {
+    console.log(error);
+    alert('Error! Please enter the data again');
+  }
 }
 
 function onInputChange() {
@@ -61,31 +103,3 @@ function onInputChange() {
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(savedForm));
 }
-
-function populateForm() {
-  const savedForm = localStorage.getItem(STORAGE_KEY);
-  if (savedForm) {
-    const { email, message } = JSON.parse(savedForm);
-    emailInput.value = email || '';
-    textarea.value = message || '';
-  }
-}
-
-// ============= post api
-
-// const BASE_URL = 'https://portfolio-js.b.goit.study/api/';
-
-// const parameters = {
-//   method: 'POST',
-//   body: JSON.stringify(),
-//   headers: { 'Content-type': 'application/json' },
-// };
-
-// fetch(`${BASE_URL}?${parameters}`).then(response => {
-//   if (!response.ok) {
-//     throw new Error(response.statusText);
-//   }
-//   return response.json();
-// });
-
-// ========= open modal window
