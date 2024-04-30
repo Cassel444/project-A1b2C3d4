@@ -33,7 +33,7 @@ function changeTheme(event) {
         }
       );
       setTimeout(() => {
-        heroTheme.style.backgroundImage = `url('/tree/main/src/img/Hero-BG/${newColor}@1x.png')`;
+        heroTheme.style.backgroundImage = `url('/Cassel444/project-A1b2C3d4/tree/main/src/img/Hero-BG/${newColor}@1x.png')`;
         heroTheme.animate(
           [
             { transform: 'translateX(-30px)', opacity: '0%' },
