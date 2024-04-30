@@ -8,7 +8,7 @@ import { Navigation, Mousewheel, Keyboard} from 'swiper/modules';
       modules: [Navigation, Mousewheel, Keyboard],
       direction: 'horizontal',
       speed: 500,
-    slidesPerView: 1, // Показывать только 1 слайд за раз
+    slidesPerView: 'auto',
       allowTouchMove: true,
       navigation: {
           nextEl: '.swiper-btn-right',
