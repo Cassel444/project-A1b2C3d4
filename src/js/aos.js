@@ -7,5 +7,5 @@ AOS.init({
   mirror: false,
   easing: 'ease-out-cubic',
   anchorPlacement: 'bottom-bottom',
-  offset: 50,
+  offset: 10,
 });
