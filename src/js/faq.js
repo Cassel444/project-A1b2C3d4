@@ -1,26 +1,24 @@
 import Accordion from 'accordion-js';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   new Accordion('.faq-list', {
-    showMultiple: false,
-    toggleElements: true,
-    duration: 500
+    duration: 600,
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const accordionHeaders = document.querySelectorAll('.ac-header');
 
   accordionHeaders.forEach(header => {
-    header.addEventListener('click', function() {
+    header.addEventListener('click', function () {
       const panel = this.nextElementSibling;
       const icon = this.querySelector('.menu-icon');
-        
-        let isOpen;
-      
+
+      let isOpen;
+
       if (icon) {
         const isOpen = panel.style.maxHeight !== '';
-        
+
         if (isOpen) {
           icon.classList.remove('menu-icon--open');
         } else {
@@ -35,13 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
         openPanels.forEach(openPanel => {
           if (openPanel !== panel) {
             openPanel.style.maxHeight = null;
-            const openIcon = openPanel.previousElementSibling.querySelector('.menu-icon');
+            const openIcon =
+              openPanel.previousElementSibling.querySelector('.menu-icon');
             if (openIcon) {
               openIcon.classList.remove('menu-icon--open');
             }
           }
         });
-        }
+      }
     });
   });
 });

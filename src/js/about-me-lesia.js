@@ -17,6 +17,7 @@ const swiper = new Swiper('.skills-container', {
     },
     mousewheel: {
         invert: false,
+        passive: true,
     },
     keyboard: {
         enabled: true,
@@ -49,7 +50,6 @@ const swiper = new Swiper('.skills-container', {
         },
     }
 });
-
 
 const btnRight = document.querySelector('.btn-slide-right');
 btnRight.addEventListener('click', function () {
