@@ -17,6 +17,7 @@ itemsMenu.addEventListener("click", interactionMenu);
 
 function interactionModalWindow() {
     modalWindow.classList.toggle("is-open");
+    document.body.classList.toggle("modal-open");
 }
 
 function interactionMenu() {

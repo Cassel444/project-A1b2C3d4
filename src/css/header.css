@@ -1,6 +1,9 @@
 html {
   scroll-behavior: smooth;
 }
+body.modal-open {
+  overflow:hidden
+}
 .header {
   position: absolute;
   top: 0;
@@ -149,7 +152,7 @@ html {
 .backdrop {
   position: fixed;
   top: 0;
-  right: -100vw;
+  left: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +167,7 @@ html {
     right 750ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open {
-  right: 0;
+  left: 0;
   opacity: 1;
   visibility: visible;
   pointer-events: initial;
