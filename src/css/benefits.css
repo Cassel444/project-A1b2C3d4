@@ -121,9 +121,13 @@
   transform: scale(1.2);
   box-shadow: 0 0px 50px rgba(166, 166, 166, 0.2);
 }
+.benefits-link {
+    margin-top: 50px;
+}
+
 
 @media only screen and (min-width: 768px) {
-  .benefits-btn {
-    margin-top: 64px;
+  .benefits-link {
+    margin-top: 82px;
   }
 }
