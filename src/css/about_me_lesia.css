@@ -75,13 +75,14 @@ ul.skills-wrapper>li.skill-slide {
 button.btn-slide-right {
   border-radius: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 28px;
   height: 28px;
   background-color: inherit;
   border: none;
   margin-left: 55px;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 550ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 button.btn-slide-right:hover {
   border: 1px solid #fafafa;
@@ -104,6 +105,11 @@ button.btn-slide-right:hover {
   height: 28px;
   stroke: #3B3B3B;
   fill: none;
+  transition: stroke 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.svg-slide:hover,
+.svg-slide:focus {
+  stroke: #fafafa;
 }
 @media only screen and (min-width: 768px) {
   .svg-slide {
