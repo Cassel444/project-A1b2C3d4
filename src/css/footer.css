@@ -290,7 +290,7 @@
 }
 .footer-close-icon:hover,
 .footer-close-icon:focus {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .modal-title {
