@@ -1,6 +1,3 @@
-import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
-
 const STORAGE_KEY = 'feedback-form-state';
 const BASE_URL = 'https://portfolio-js.b.goit.study/api/requests';
 
@@ -56,11 +53,7 @@ async function handleSubmit(event) {
   try {
     event.preventDefault();
     if (emailInput.value === '' || textarea.value === '') {
-      return iziToast.error({
-        title: 'Error',
-        message: 'Please fill out all forms',
-        position: 'topRight',
-      });
+      return alert('Please fill out all forms');
     }
     const savedForm = {
       email: emailInput.value.trim(),
@@ -76,11 +69,7 @@ async function handleSubmit(event) {
 
     modalSend.classList.remove('is-hidden');
   } catch (error) {
-    iziToast.error({
-      title: 'Error',
-      message: 'Oops! Something broke on the server, please try again later',
-      position: 'topRight',
-    });
+    console.log(error);
   }
 }
 
@@ -100,6 +89,7 @@ function postData(data) {
     });
   } catch (error) {
     console.log(error);
+    alert('Error! Please enter the data again');
   }
 }
 
@@ -113,3 +103,27 @@ function onInputChange() {
   };
   localStorage.setItem(STORAGE_KEY, JSON.stringify(savedForm));
 }
+
+const footerContacts = document.querySelectorAll('.footer-contact');
+
+footerContacts.forEach(contact => {
+  contact.addEventListener('mousemove', e => {
+    const { offsetX, offsetY } = e;
+    const { offsetWidth, offsetHeight } = contact;
+
+    const centerX = offsetWidth / 2;
+    const centerY = offsetHeight / 2;
+
+    const deltaX = (offsetX - centerX) / centerX;
+    const deltaY = (offsetY - centerY) / centerY;
+
+    const shadowX = deltaX * 20;
+    const shadowY = deltaY * 20;
+
+    contact.style.boxShadow = `${shadowX}px ${shadowY}px 30px rgba(166, 166, 166, 0.2)`;
+  });
+
+  contact.addEventListener('mouseleave', () => {
+    contact.style.boxShadow = 'none';
+  });
+});
