@@ -281,8 +281,7 @@
   background-color: inherit;
   border: none;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border 550ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-close-icon {
@@ -292,7 +291,7 @@
 }
 .footer-close-icon:hover,
 .footer-close-icon:focus {
-  scale: 1.2;
+  transform: scale(1.2);
 }
 
 .modal-title {
