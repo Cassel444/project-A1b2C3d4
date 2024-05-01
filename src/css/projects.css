@@ -170,7 +170,7 @@
 .project-button-link:focus {
   box-shadow: 0 0px 15px var(--hover-color);
   background-color: var(--hover-color);
-  scale: 1.03;
+  transform: scale(1.03);
 }
 
 .project-card-info-list-item {
