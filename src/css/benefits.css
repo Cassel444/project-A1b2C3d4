@@ -122,9 +122,13 @@
   border: 1px solid #fafafa;
   scale: 1.03;
 }
+.benefits-link {
+    margin-top: 50px;
+}
+
 
 @media only screen and (min-width: 768px) {
-  .benefits-btn {
-    margin-top: 64px;
+  .benefits-link {
+    margin-top: 82px;
   }
 }
