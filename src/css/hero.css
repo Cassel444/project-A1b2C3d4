@@ -177,7 +177,7 @@
 .color-change-button:focus {
   box-shadow: 0 0px 15px var(--hover-color);
   background-color: var(--hover-color);
-  scale: 1.03;
+  transform: scale(1.03);
 }
 @media screen and (min-width: 768px) {
   .hero-list {
