@@ -8,4 +8,3 @@ import './js/projects.js';
 import './js/about-me-lesia';
 import './js/footer.js';
 import './js/aos.js';
-import './js/button-lights.js';
