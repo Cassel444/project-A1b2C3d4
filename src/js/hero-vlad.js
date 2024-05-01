@@ -1,19 +1,28 @@
-import redBG from '../img/Hero-BG/ed3b44@1x.png';
-import yellowBG from '../img/Hero-BG/c6e327@1x.png';
-import blueBG from '../img/Hero-BG/0041e8@1x.png';
-import pinkBG from '../img/Hero-BG/e6533c@1x.png';
-import grayBG from '../img/Hero-BG/2b4441@1x.png';
-import orangeBG from '../img/Hero-BG/ff7f08@1x.png';
-
 const BG_Object = [
-  { color: 'ed3b44', image: redBG },
-  { color: 'c6e327', image: yellowBG },
-  { color: '0041e8', image: blueBG },
-  { color: 'e6533c', image: pinkBG },
-  { color: '2b4441', image: grayBG },
-  { color: 'ff7f08', image: orangeBG },
+  { color: 'ed3b44', url: '../img/Hero-BG/ed3b44@1x.png' },
+  { color: 'c6e327', url: '../img/Hero-BG/c6e327@1x.png' },
+  { color: '0041e8', url: '../img/Hero-BG/0041e8@1x.png' },
+  { color: 'e6533c', url: '../img/Hero-BG/e6533c@1x.png' },
+  { color: '2b4441', url: '../img/Hero-BG/2b4441@1x.png' },
+  { color: 'ff7f08', url: '../img/Hero-BG/ff7f08@1x.png' },
 ];
-console.log(BG_Object);
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = () => resolve(img);
+    img.onerror = reject;
+    img.src = url;
+  });
+}
+
+const loadedImages = await Promise.all(
+  BG_Object.map(obj => loadImage(obj.url))
+);
+
+const imageMap = BG_Object.reduce((acc, obj, index) => {
+  acc[obj.color] = loadedImages[index];
+  return acc;
+}, {});
 
 const rootStyle = document.documentElement.style;
 const heroTheme = document.querySelector('.hero-section');
@@ -50,8 +59,8 @@ function changeTheme(event) {
         }
       );
       setTimeout(() => {
-        const newBG = BG_Object.find(obj => obj.color == newColor);
-        heroTheme.style.backgroundImage = `url(${newBG.image})`;
+        const newImage = imageMap[newColor];
+        heroTheme.style.backgroundImage = `url(${newImage.src})`;
         heroTheme.animate(
           [
             { transform: 'translateX(-30px)', opacity: '0%' },
