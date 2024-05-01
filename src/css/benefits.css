@@ -128,7 +128,9 @@
     0 0 10px var(--change-color), 0 0 15px var(--change-color),
     0 0 20px var(--change-color);
 }
-
+.benefits-link {
+  margin-top: 50px;
+}
 @media only screen and (min-width: 768px) {
   .benefits-link {
     margin-top: 82px;
