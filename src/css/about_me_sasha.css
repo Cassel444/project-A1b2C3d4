@@ -155,3 +155,9 @@
 .about-is-active .about-ac-panel {
   display: block;
 }
+
+@media only screen and (max-width: 375px) {
+  .camera-man {
+    max-width: 100%;
+  }
+}
