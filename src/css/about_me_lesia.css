@@ -59,7 +59,7 @@ ul.skills-wrapper>li.skill-slide {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 ul.skills-wrapper>li.skill-slide:hover {
-  transform: scale(1.2);
+  transform: scale(1.02);
   border: 1px solid #fafafa;
   box-shadow: 0 0px 15px rgba(166, 166, 166, 0.2);
 }
