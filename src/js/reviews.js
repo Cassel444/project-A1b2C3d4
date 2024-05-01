@@ -36,9 +36,7 @@ function setupSwiper() {
       enabled: true,
       onlyInViewport: true,
     },
-    mousewheel: {
-      invert: false,
-    },
+    mousewheel: false,
     navigation: {
       nextEl: '.right-btn',
       prevEl: '.left-btn',

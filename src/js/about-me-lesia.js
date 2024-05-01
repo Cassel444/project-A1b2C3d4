@@ -15,10 +15,7 @@ const swiper = new Swiper('.skills-container', {
     navigation: {
         nextEl: '.btn-slide-right',
     },
-    mousewheel: {
-        invert: false,
-        passive: true,
-    },
+    mousewheel: false,
     keyboard: {
         enabled: true,
         onlyInViewport: true,

@@ -15,9 +15,7 @@ function projectSwiper() {
             nextEl: '.swiper-btn-right',
             prevEl: '.swiper-btn-left',
         },
-        mousewheel: {
-            invert: false,
-        },
+        mousewheel: false,
         keyboard: {
             enabled: true,
             onlyInViewport: true,
