@@ -104,6 +104,14 @@
   align-items: center;
   flex-shrink: 0;
   margin-left: auto;
+
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color);
+  transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.open-answer:hover {
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
+    0 0 10px var(--change-color), 0 0 15px var(--change-color),
+    0 0 20px var(--change-color);
 }
 
 .faq-answer-element {

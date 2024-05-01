@@ -1,4 +1,3 @@
-
 .about-me-wrapper {
   display: flex;
   align-items: baseline;
@@ -12,17 +11,17 @@ div.skills-container {
   margin-top: 32px;
 }
 @media only screen and (min-width: 768px) {
- div.skills-container {
-  width: 600px;
-  margin-top: 64px;
- }
+  div.skills-container {
+    width: 600px;
+    margin-top: 64px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
- div.skills-container {
-  width: 1200px;
-  margin-top: 96px;
- }
+  div.skills-container {
+    width: 1200px;
+    margin-top: 96px;
+  }
 }
 
 ul.skills-wrapper {
@@ -36,15 +35,15 @@ ul.skills-wrapper {
   padding: 0;
 }
 
-ul.skills-wrapper>li.red {
+ul.skills-wrapper > li.red {
   background-color: var(--change-color);
 }
-ul.skills-wrapper>li.red:hover {
+ul.skills-wrapper > li.red:hover {
   background-color: var(--hover-color);
   border: none;
 }
 
-ul.skills-wrapper>li.skill-slide {
+ul.skills-wrapper > li.skill-slide {
   border: 1px solid #fafafa33;
   border-radius: 50%;
   width: 130px;
@@ -56,20 +55,22 @@ ul.skills-wrapper>li.skill-slide {
   letter-spacing: -0.02em;
   justify-content: center;
   align-items: center;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), scale 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color);
+  transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
-ul.skills-wrapper>li.skill-slide:hover {
-  transform: scale(1.02);
-  border: 1px solid #fafafa;
-  box-shadow: 0 0px 15px rgba(166, 166, 166, 0.2);
+ul.skills-wrapper > li.skill-slide:hover {
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
+    0 0 10px var(--change-color), 0 0 15px var(--change-color),
+    0 0 20px var(--change-color);
 }
 @media only screen and (min-width: 768px) {
-ul.skills-wrapper>li.skill-slide {
-  width: 200px;
-  height: 200px;
-  font-size: 20px;
-  line-height: 1.21em;
- }
+  ul.skills-wrapper > li.skill-slide {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+    line-height: 1.21em;
+  }
 }
 
 button.btn-slide-right {
@@ -82,34 +83,41 @@ button.btn-slide-right {
   background-color: inherit;
   border: none;
   margin-left: 55px;
-  transition: border 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: border 550ms cubic-bezier(0.4, 0, 0.2, 1); */
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color);
+  transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1);
 }
 button.btn-slide-right:hover {
-  border: 1px solid #fafafa;
-  box-shadow: 0 0px 50px rgba(166, 166, 166, 0.2);
+  /* border: 1px solid #fafafa;
+  box-shadow: 0 0px 50px rgba(166, 166, 166, 0.2); */
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
+    0 0 10px var(--change-color), 0 0 15px var(--change-color),
+    0 0 20px var(--change-color);
 }
 @media only screen and (min-width: 768px) {
   button.btn-slide-right {
-   width: 40px;
-   height: 40px;
-   margin-left: 64px;   
+    width: 40px;
+    height: 40px;
+    margin-left: 64px;
   }
 }
 @media only screen and (min-width: 1440px) {
   button.btn-slide-right {
-   margin-left: 72px;
+    margin-left: 72px;
   }
 }
 .svg-slide {
   width: 28px;
   height: 28px;
-  stroke: #3B3B3B;
+  stroke: #3b3b3b;
   fill: none;
-  transition: stroke 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: stroke 550ms cubic-bezier(0.4, 0, 0.2, 1); */
+  /* box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color); */
+  /* transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1); */
 }
 .svg-slide:hover,
 .svg-slide:focus {
-  stroke: #fafafa;
+  /* stroke: #fafafa; */
 }
 @media only screen and (min-width: 768px) {
   .svg-slide {
