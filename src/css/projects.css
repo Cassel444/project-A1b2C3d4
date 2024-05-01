@@ -157,19 +157,21 @@
   color: #fafafa;
   border: 0;
   background-color: var(--change-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    scale 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 16px;
   font-weight: 500;
   letter-spacing: -0.32px;
+
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color);
+  transition: box-shadow 1s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .project-button-link:hover,
 .project-button-link:focus {
-  box-shadow: 0 0px 15px var(--hover-color);
-  background-color: var(--hover-color);
+  box-shadow: 0 0 1px var(--change-color), 0 0 5px var(--change-color),
+    0 0 10px var(--change-color), 0 0 15px var(--change-color),
+    0 0 20px var(--change-color);
   scale: 1.03;
 }
 
