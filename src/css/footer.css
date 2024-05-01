@@ -1,3 +1,11 @@
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fafafa !important;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #1c1d20 inset !important;
+}
+
 .footer-section {
   max-width: 375px;
   padding: 0 16px;
